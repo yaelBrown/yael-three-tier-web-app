@@ -1,1 +1,6 @@
-"" 
+start
+
+docker run --name guestbook -e MYSQL_ROOT_PASSWORD=[pw] -d mysql:latest
+
+
+docker exec -it [container id]

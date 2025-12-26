@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
-import CONSTANTS from './utils/constants';
+// Working before adding API integration
+
+import { useState } from 'react';
 
 import './App.css';
 import Form from './Form';
@@ -51,31 +52,9 @@ const sampleMessages = [
 function App() {
   const [messages, setMessages] = useState(sampleMessages);
 
-  // GET all entries
-  const fetchEntries = async () => {
-    const res = await fetch(CONSTANTS.API_URL + "entries");
-    const data = await res.json();
-    console.log(data)
-    setMessages(data);
+  const addEntry = (name, message) => {
+    setMessages([{ name, message }, ...messages]);
   };
-
-  // POST a new entry
-  const addEntry = async (name, message) => {
-    // setMessages([{ name, message }, ...messages]);
-    await fetch(CONSTANTS.API_URL + "entries", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, message })
-    });
-
-    // Re-fetch
-    fetchEntries();
-  };
-
-  // Init on Page Load
-  useEffect(() => {
-    fetchEntries();
-  }, []);
 
   return (
     <div className="App">
