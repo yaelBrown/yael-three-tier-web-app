@@ -1,0 +1,68 @@
+import { useState } from 'react';
+import './App.css';
+import Form from './Form';
+import Entries from './Entries';
+
+const sampleMessages = [
+  {
+    name: "Alice",
+    message: "Hey everyone, just checking in."
+  },
+  {
+    name: "Brian",
+    message: "The deployment finished successfully."
+  },
+  {
+    name: "Carla",
+    message: "Does anyone know why the build is failing?"
+  },
+  {
+    name: "David",
+    message: "I pushed a fix to the main branch."
+  },
+  {
+    name: "Elena",
+    message: "Standup is moved to 10:30 today."
+  },
+  {
+    name: "Frank",
+    message: "Reviewing the PR now."
+  },
+  {
+    name: "Grace",
+    message: "The API response time looks better after caching."
+  },
+  {
+    name: "Hector",
+    message: "We need to rotate the keys before Friday."
+  },
+  {
+    name: "Irene",
+    message: "QA passed on all test cases."
+  },
+  {
+    name: "Jamal",
+    message: "Prod is live. Monitoring for issues."
+  }
+];
+
+function App() {
+  const [messages, setMessages] = useState(sampleMessages);
+
+  const addEntry = (name, message) => {
+    setMessages([...messages, { name, message }]);
+  };
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Example 3 Tier Web App</h1>
+        <h2>Guestbook App</h2>
+        <Form onAddEntry={addEntry} />
+        <Entries messages={messages} />
+      </header>
+    </div>
+  );
+}
+
+export default App;
