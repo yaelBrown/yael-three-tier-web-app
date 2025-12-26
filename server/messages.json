@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Nina",
+    "message": "Morning all, coffee hasn't kicked in yet."
+  },
+  {
+    "name": "Omar",
+    "message": "The server restarted after the memory spike."
+  },
+  {
+    "name": "Priya",
+    "message": "I'll take ownership of the auth bug."
+  },
+  {
+    "name": "Quentin",
+    "message": "Latency jumps only when traffic spikes."
+  },
+  {
+    "name": "Rosa",
+    "message": "Design review notes are in the doc."
+  },
+  {
+    "name": "Sam",
+    "message": "Staging looks good on my end."
+  },
+  {
+    "name": "Tariq",
+    "message": "We should add logging around that edge case."
+  },
+  {
+    "name": "Uma",
+    "message": "Can someone sanity-check my SQL query?"
+  },
+  {
+    "name": "Victor",
+    "message": "Rolling back the config change just in case."
+  },
+  {
+    "name": "Wendy",
+    "message": "All metrics are green so far."
+  }
+]
+

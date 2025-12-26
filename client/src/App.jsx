@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import './App.css';
 import Form from './Form';
 import Entries from './Entries';
@@ -50,7 +51,7 @@ function App() {
   const [messages, setMessages] = useState(sampleMessages);
 
   const addEntry = (name, message) => {
-    setMessages([...messages, { name, message }]);
+    setMessages([{ name, message }, ...messages]);
   };
 
   return (

@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server for guestbook ",
+  "homepage": "https://github.com/yaelBrown/yael-three-tier-web-app#readme",
+  "bugs": {
+    "url": "https://github.com/yaelBrown/yael-three-tier-web-app/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaelBrown/yael-three-tier-web-app.git"
+  },
+  "license": "ISC",
+  "author": "Yael",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
