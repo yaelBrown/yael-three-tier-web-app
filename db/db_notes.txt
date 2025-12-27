@@ -4,3 +4,11 @@ docker run --name guestbook -e MYSQL_ROOT_PASSWORD=[pw] -d mysql:latest
 
 
 docker exec -it [container id]
+
+
+docker run -d \
+  --name mysql \
+  -p 3306:3306 \
+  -e MYSQL_ROOT_PASSWORD=secret \
+  -e MYSQL_DATABASE=guestbook \
+  mysql:latest
